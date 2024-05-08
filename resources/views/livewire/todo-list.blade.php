@@ -15,9 +15,11 @@
 
     </div>
     <div id="todos-list">
-        @include('livewire.includes.todo-card')
+        @foreach($todos as $todo)
+            @include('livewire.includes.todo-card')
+        @endforeach
         <div class="my-2">
-            <!-- Pagination goes here -->
+            {{ $todo->links() }}
         </div>
     </div>
 </div>
